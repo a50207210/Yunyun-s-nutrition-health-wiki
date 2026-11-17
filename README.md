@@ -1,18 +1,33 @@
 # Yunyun's nutrition-health-wiki
 
-以政府健康衛教手冊為首批來源的繁體中文LLM Wiki，支援營養學、飲食、糖尿病、失智症、孕期與高齡營養、戒菸及健康管理教學。
+這是以五份指定衛福部國民健康署相關手冊為起點、面向一般民眾與大學生的營養學與健康保健Wiki。
 
-## 快速開始
+## 網站入口
 
-- [Wiki知識庫首頁](wiki/index.md)：六大分類、12篇文章、基本跨頁連結。
-- [HTML教學簡報](slides/index.html)：主題「均衡飲食與健康管理」，可直接在瀏覽器開啟。
-- [來源登錄](wiki/sources/source-register.md)：手冊版本、原檔名稱與引用ID。
-- [AI維護規則](AGENTS.md)與[Skills](.agents/skills/)：所有寫入都要先提出變更摘要，使用者明確同意後才允許。
+- [五大主題首頁](index.html)
+- [五份獨立HTML教學簡報](slides/index.html)
+- [Markdown Wiki索引](wiki/index.md)
 
-## 公開發布與上傳
+## 五大主題
 
-此ZIP內**不含原始PDF**，僅收錄重新撰寫的教學文字、原創樣式與引用來源資訊。你可以在GitHub Repository `a50207210/Yunyun-s-nutrition-health-wiki`使用**Add file → Upload files**，上傳本資料夾的內容(不要把最外層資料夾再多包一層)。GitHub Pages是否啟用由你另行決定；若要以`slides/index.html`作為網站入口，可能需要另設定發布位置。
+1. [戒菸教戰手冊](topics/01-quit-smoking/)：[HTML簡報](topics/01-quit-smoking/slides.html)｜[Markdown知識](topics/01-quit-smoking/knowledge.md)
+2. [2021糖尿病與我手冊](topics/02-diabetes/)：[HTML簡報](topics/02-diabetes/slides.html)｜[Markdown知識](topics/02-diabetes/knowledge.md)
+3. [失智症衛教及資源手冊](topics/03-dementia/)：[HTML簡報](topics/03-dementia/slides.html)｜[Markdown知識](topics/03-dementia/knowledge.md)
+4. [每日飲食指南手冊](topics/04-daily-diet/)：[HTML簡報](topics/04-daily-diet/slides.html)｜[Markdown知識](topics/04-daily-diet/knowledge.md)
+5. [食在好孕 吃對營養 寶媽都健康](topics/05-pregnancy/)：[HTML簡報](topics/05-pregnancy/slides.html)｜[Markdown知識](topics/05-pregnancy/knowledge.md)
 
-## 文獻與內容限制
+## 網站部署
 
-文章所引用的政府文件包含較早年份版本；本專案沒有自動更新機制，不主動搜尋替換原始數據。健康內容為一般衛教，不取代專業診斷。請不要公開上傳政府手冊PDF或直接重製其圖像。每一篇具體數值均以原始手冊版本為準。
+這是一個靜態網站。上傳至GitHub Repository根目錄後，在`Settings > Pages`選擇`Deploy from a branch`、`main`、`/(root)`。部署成功後，專案網址會進入`index.html`首頁；`slides/`則是五份簡報的清單。
+
+## 更新規則
+
+未經使用者核准，不得自行新增、修改、刪除任何Wiki或網頁內容。詳細規範見[AGENTS.md](AGENTS.md)及`.agents/skills/`。原始PDF不公開上傳；網站提供的是經整理的衛教摘述，並標示原始PDF頁序與年份。
+
+## 重要：出版插圖授權
+
+本站`assets/`含由使用者提供的政府手冊封面/孕期主題圖片所製作的網站縮圖。**這些圖片不因為已上傳至對話便自動獲得公開重製權。**正式將本ZIP公開部署前，請確認對應圖片的著作權授權或使用許可；若未取得許可，可替換為有授權圖片。本站頁面與簡報文字為另行整理，未附原始PDF。
+
+## 舊版內容
+
+原六分類12篇Markdown保留於`wiki/`既有路徑；[補充知識文章索引](wiki/supplementary-index.md)。原本整合式簡報暫存於`slides/legacy-balanced-diet.html`，不作為網站入口。
